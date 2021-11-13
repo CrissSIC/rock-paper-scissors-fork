@@ -1,0 +1,21 @@
+
+
+.rockButton:hover,
+.paperButton:hover,
+.scissorsButton:hover{
+    outline:3px solid  #9370DB;   
+    cursor:pointer;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px #9370DB
+}
+img{  
+    filter:drop-shadow(3px 5px 2px #9370DB);
+    width:150px;
+    height:150px;
+}
+.allButtons{
+    display:flex;
+    gap:20px;
+}
+
+ 
