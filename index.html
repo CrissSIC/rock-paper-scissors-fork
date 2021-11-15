@@ -9,12 +9,15 @@
 </head>
 <body>
    
-<div class="score">Score:</div>
+<div class="scoreTitle">Score:</div>
+<div class="score">
 <div id="playerScore">Player: 0</div>
 <div id="computerScore">Computer: 0</div>
-<div id="roundWinner">Let's see who gets first to 5 wins!</div>
+</div>
+<div class ="rounderWin" id="roundWinner">Let's see who gets first to 5 wins!</div>
 
 <div class="allButtons">
+    <div class="playerButtons">
     <div class="playerChoice" id="rock" value="rock">
     <img src="images/rock.svg" style="max-width:200px">
 </div>
@@ -24,6 +27,22 @@
 <div class="playerChoice" id="scissors" value="scissors">
     <img src="images/scissors.svg" style="max-width:200px">
 </div>
+</div>
+<div class="computerButtons">
+<div class="playerChoice" id="rock" value="rock">
+    <img src="images/rock.svg" style="max-width:200px">
+</div>
+<div class="playerChoice" id="paper" value="paper">
+    <img src="images/paper.svg" style="max-width:200px">
+</div>
+<div class="playerChoice" id="scissors" value="scissors">
+    <img src="images/scissors.svg" style="max-width:200px">
+</div>
+</div>
+</div>
+<div class="choiceMessages">
+<div class="chooseMessagePlayer">Press one of the buttons above to make your guess!</div>
+<div class="chooseMessageComputer">This is what the computer selects!</div>
 </div>
     <script src="main.js"></script>
 

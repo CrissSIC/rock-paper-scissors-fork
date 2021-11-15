@@ -1,21 +1,74 @@
+@media (max-width: 1060px) {
+  .allButtons {
+    flex-direction: column;
+  }
 
+  img {
+    width: 50px;
+  }
+}
+.playerChoice {
+  border: 1px solid blue;
+}
+img {
+  filter: drop-shadow(3px 5px 2px #9370db);
+  width: 150px;
+  height: 150px;
+}
+.playerButtons {
+  display: flex;
+  justify-content: center;
 
-.rockButton:hover,
-.paperButton:hover,
-.scissorsButton:hover{
-    outline:3px solid  #9370DB;   
-    cursor:pointer;
-    border-radius: 8px;
-    box-shadow: 5px 5px 5px 5px #9370DB
+  border: 1px solid red;
+  width: 50%;
 }
-img{  
-    filter:drop-shadow(3px 5px 2px #9370DB);
-    width:150px;
-    height:150px;
+.computerButtons {
+  display: flex;
+  justify-content: center;
+  border: 1px solid red;
+  width: 50%;
 }
-.allButtons{
-    display:flex;
-    gap:20px;
+.allButtons {
+  margin: 20vh 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid green;
 }
 
- 
+body {
+  background-color: gray;
+  margin: 0;
+}
+.scoreTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+}
+.score {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 22px;
+}
+
+.choiceMessages {
+  display: flex;
+  border: 1px solid red;
+  margin: 5vh 0 0 0;
+  font-size: 22px;
+}
+.chooseMessagePlayer {
+  border: 1px solid green;
+  width: 50%;
+  text-align: center;
+}
+.chooseMessageComputer {
+  border: 1px solid green;
+  width: 50%;
+  text-align: center;
+}
+
+.score {
+  margin: 5vh 0 0 0;
+}
