@@ -5,9 +5,31 @@ function computerPlayer() {
 
 let computerWins = 0;
 let playerWins = 0;
+
 function playRound(playerSelection) {
   let computerSelection = computerPlayer();
   let roundWinner = "";
+  if (computerSelection == "rock") {
+    document.getElementById("rockComputer").style.background = "green";
+    document.getElementById("paperComputer").style.background =
+      "RGB(255, 127, 127)";
+    document.getElementById("scissorsComputer").style.background =
+      "RGB(255, 127, 127)";
+  }
+  if (computerSelection == "paper") {
+    document.getElementById("rockComputer").style.background =
+      "RGB(255, 127, 127)";
+    document.getElementById("paperComputer").style.background = "green";
+    document.getElementById("scissorsComputer").style.background =
+      "RGB(255, 127, 127)";
+  }
+  if (computerSelection == "scissors") {
+    document.getElementById("rockComputer").style.background =
+      "RGB(255, 127, 127)";
+    document.getElementById("paperComputer").style.background =
+      "RGB(255, 127, 127)";
+    document.getElementById("scissorsComputer").style.background = "green";
+  }
   if (computerSelection == playerSelection) {
     roundWinner = "It's a tie!";
   } else if (
@@ -20,9 +42,9 @@ function playRound(playerSelection) {
     document.getElementById("computerScore").innerHTML =
       "Computer: " + computerWins;
     if (computerWins == 5) {
-      rock.style["pointer-events"] = "none";
-      paper.style["pointer-events"] = "none";
-      scissors.style["pointer-events"] = "none";
+      document.getElementById("allButtons").style.display = "none";
+      document.getElementById("choiceMessages").style.display = "none";
+      document.getElementById("restart").style.display = "block";
       roundWinner =
         "Computer is first to 5 wins. Press restart for a new game.";
     }
@@ -31,9 +53,10 @@ function playRound(playerSelection) {
     roundWinner = "You win!Computer loses!";
     document.getElementById("playerScore").innerHTML = "Player: " + playerWins;
     if (playerWins == 5) {
-      rock.style["pointer-events"] = "none";
-      paper.style["pointer-events"] = "none";
-      scissors.style["pointer-events"] = "none";
+      document.getElementById("allButtons").style.display = "none";
+      document.getElementById("choiceMessages").style.display = "none";
+      document.getElementById("restart").style.display = "block";
+
       roundWinner = "Player is first to 5 wins. Press restart for a new game.";
     }
   }
@@ -53,3 +76,22 @@ let scissors = document.getElementById("scissors");
 scissors.addEventListener("mousedown", function () {
   playRound("scissors");
 });
+document.getElementById("restart").addEventListener("click", function () {
+  document.getElementById("allButtons").style.display = "flex";
+  document.getElementById("choiceMessages").style.display = "flex";
+  document.getElementById("restart").style.display = "none";
+  computerWins = 0;
+  playerWins = 0;
+  document.getElementById("playerScore").innerHTML = "Player: " + playerWins;
+  document.getElementById("computerScore").innerHTML =
+    "Computer: " + playerWins;
+  document.getElementById("roundWinner").innerHTML =
+    "Let's see who gets first to 5 wins!";
+  document.getElementById("rockComputer").style.background =
+    "RGB(255, 127, 127)";
+  document.getElementById("paperComputer").style.background =
+    "RGB(255, 127, 127)";
+  document.getElementById("scissorsComputer").style.background =
+    "RGB(255, 127, 127)";
+});
+
