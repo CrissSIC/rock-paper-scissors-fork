@@ -9,24 +9,43 @@
 </head>
 <body>
    
-<div class="score">Score:</div>
+<div class="scoreTitle">Score:</div>
+<div class="score">
 <div id="playerScore">Player: 0</div>
 <div id="computerScore">Computer: 0</div>
-<div id="roundWinner">Let's see who gets first to 5 wins!</div>
+</div>
+<div class ="rounderWin" id="roundWinner">Let's see who gets first to 5 wins!</div>
 
-<div class="allButtons">
-    <div class="playerChoice" id="rock" value="rock">
+<div id="allButtons" class="allButtons">
+    <div class="playerButtons">
+    <div class="buttonChoice1" id="rock" >
     <img src="images/rock.svg" style="max-width:200px">
 </div>
-<div class="playerChoice" id="paper" value="paper">
+<div class="buttonChoice2" id="paper" >
     <img src="images/paper.svg" style="max-width:200px">
 </div>
-<div class="playerChoice" id="scissors" value="scissors">
+<div class="buttonChoice3" id="scissors" >
     <img src="images/scissors.svg" style="max-width:200px">
 </div>
 </div>
+<div class="computerButtons">
+<div class="buttonChoice4" id="rockComputer" >
+    <img src="images/rock.svg" style="max-width:200px">
+</div>
+<div class="buttonChoice5" id="paperComputer" >
+    <img src="images/paper.svg" style="max-width:200px">
+</div>
+<div class="buttonChoice6" id="scissorsComputer" >
+    <img src="images/scissors.svg" style="max-width:200px">
+</div>
+</div>
+</div>
+<div id="choiceMessages" class="choiceMessages">
+<div class="chooseMessagePlayer">Press one of the buttons above!</div>
+<div class="chooseMessageComputer">This is what the computer selects!</div>
+</div>
+<button class="restart" id="restart">RESTART</button>
     <script src="main.js"></script>
-
 </div>
 </div>
 </body>
