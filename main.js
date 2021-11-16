@@ -5,10 +5,8 @@ function computerPlayer() {
 
 let computerWins = 0;
 let playerWins = 0;
-
 function playRound(playerSelection) {
   let computerSelection = computerPlayer();
-
   let roundWinner = "";
   if (computerSelection == playerSelection) {
     roundWinner = "It's a tie!";
@@ -22,9 +20,9 @@ function playRound(playerSelection) {
     document.getElementById("computerScore").innerHTML =
       "Computer: " + computerWins;
     if (computerWins == 5) {
-      document.getElementById("allButtons").style.display = "none";
-      document.getElementById("choiceMessages").style.display = "none";
-      document.getElementById("restart").style.display = "block";
+      rock.style["pointer-events"] = "none";
+      paper.style["pointer-events"] = "none";
+      scissors.style["pointer-events"] = "none";
       roundWinner =
         "Computer is first to 5 wins. Press restart for a new game.";
     }
@@ -33,9 +31,9 @@ function playRound(playerSelection) {
     roundWinner = "You win!Computer loses!";
     document.getElementById("playerScore").innerHTML = "Player: " + playerWins;
     if (playerWins == 5) {
-      document.getElementById("allButtons").style.display = "none";
-      document.getElementById("choiceMessages").style.display = "none";
-      document.getElementById("restart").style.display = "block";
+      rock.style["pointer-events"] = "none";
+      paper.style["pointer-events"] = "none";
+      scissors.style["pointer-events"] = "none";
       roundWinner = "Player is first to 5 wins. Press restart for a new game.";
     }
   }
@@ -54,16 +52,4 @@ paper.addEventListener("mousedown", function () {
 let scissors = document.getElementById("scissors");
 scissors.addEventListener("mousedown", function () {
   playRound("scissors");
-});
-document.getElementById("restart").addEventListener("click", function () {
-  document.getElementById("allButtons").style.display = "flex";
-  document.getElementById("choiceMessages").style.display = "flex";
-  document.getElementById("restart").style.display = "none";
-  computerWins = 0;
-  playerWins = 0;
-  document.getElementById("playerScore").innerHTML = "Player: " + playerWins;
-  document.getElementById("computerScore").innerHTML =
-    "Computer: " + playerWins;
-  document.getElementById("roundWinner").innerHTML =
-    "Let's see who gets first to 5 wins!";
 });

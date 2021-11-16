@@ -1,104 +1,21 @@
-@media (max-width: 1060px) {
-  .playerButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-  .computerButtons {
-    flex-direction: column;
-    align-items: center;
-  }
-  .allButtons {
-    margin: -10vh 0 0 0;
-  }
+
+
+.rockButton:hover,
+.paperButton:hover,
+.scissorsButton:hover{
+    outline:3px solid  #9370DB;   
+    cursor:pointer;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 5px #9370DB
 }
-.buttonChoice,
-.buttonChoice1,
-.buttonChoice2,
-.buttonChoice3 {
-  background: RGB(255, 127, 127);
-  border-radius: 100px;
+img{  
+    filter:drop-shadow(3px 5px 2px #9370DB);
+    width:150px;
+    height:150px;
 }
-.buttonChoice1:hover,
-.buttonChoice2:hover,
-.buttonChoice3:hover {
-  background: green;
-  cursor: pointer;
-}
-img {
-  filter: drop-shadow(3px 5px 2px #9370db);
-  width: 150px;
-  height: 150px;
+.allButtons{
+    display:flex;
+    gap:20px;
 }
 
-.playerButtons {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
-.computerButtons {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
-.allButtons {
-  padding: 20vh 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body {
-  background-color: RGB(204, 153, 255);
-  margin: 0;
-}
-
-.scoreTitle {
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
-}
-.score {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  font-size: 22px;
-}
-
-.choiceMessages {
-  display: flex;
-  margin: 5vh 0 0 0;
-  font-size: 22px;
-}
-.chooseMessagePlayer {
-  width: 50%;
-  text-align: center;
-}
-.chooseMessageComputer {
-  width: 50%;
-  text-align: center;
-}
-
-.score {
-  margin: 5vh 0 0 0;
-}
-
-.rounderWin {
-  display: flex;
-  justify-content: center;
-  padding: 10vh 0 0 0;
-  text-align: center;
-}
-
-.restart {
-  background-color: green;
-  color: white;
-  border-color: RGB(255, 127, 127);
-  border-radius: 10px;
-  padding: 20px 25px 20px 25px;
-  position: absolute;
-  top: 50%;
-  margin: 0;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  display: none;
-}
+ 
