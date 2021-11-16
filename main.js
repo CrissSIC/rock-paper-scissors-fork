@@ -36,7 +36,6 @@ function playRound(playerSelection) {
       document.getElementById("allButtons").style.display = "none";
       document.getElementById("choiceMessages").style.display = "none";
       document.getElementById("restart").style.display = "block";
-
       roundWinner = "Player is first to 5 wins. Press restart for a new game.";
     }
   }

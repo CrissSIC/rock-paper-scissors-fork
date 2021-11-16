@@ -51,6 +51,7 @@ body {
   background-color: RGB(204, 153, 255);
   margin: 0;
 }
+
 .scoreTitle {
   display: flex;
   justify-content: center;
